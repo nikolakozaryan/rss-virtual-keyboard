@@ -1,0 +1,15 @@
+.language-tip {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.language-switcher {
+    text-decoration: underline;
+    cursor: pointer;
+    color: $font-color;
+    transition: .5s;
+    &:hover {
+        color: $service-button-color;
+    }
+}
