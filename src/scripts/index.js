@@ -32,19 +32,19 @@ textarea.placeholder = 'Here will be your text';
 
 textContainer.append(textarea);
 
-buttonElements.forEach(item => item.addEventListener('mousedown', (e) => {
+buttonElements.forEach(item => item.addEventListener('mousedown', () => {
     item.classList.add('button-pressed');
     pressed.add(item.id)
     if(item.id === 'CapsLock') {
         caps(isCapsed);
-        CapsLock.classList.toggle('active-caps');
+        document.CapsLock.classList.toggle('active-caps');
         isCapsed = !isCapsed;
     }
     if (pressed.has('ShiftLeft')) addAltSymbol(item, isCapsed)
     else addSymbol(item)
 }));
 
-buttonElements.forEach(item => item.addEventListener('mouseup', (e) => {
+buttonElements.forEach(item => item.addEventListener('mouseup', () => {
     item.classList.remove('button-pressed');
     pressed.delete(item.id)
     textarea.focus()
