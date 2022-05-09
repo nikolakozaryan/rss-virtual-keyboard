@@ -4,7 +4,7 @@
   "description": "Virtual keyboard project!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eslint": "npx eslint ./src/scripts/*.js"
   },
   "repository": {
     "type": "git",
