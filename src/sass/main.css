@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+html {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  color: #474747;
+}
+
+.container {
+  width: 960px;
+  margin: 50vh auto 0;
+  transform: translateY(-50%);
+}
+
+.keyboard-container {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  background: #beffec;
+  border: 2px solid #25ffbf;
+  align-content: space-between;
+}
+
+.button {
+  position: relative;
+  cursor: pointer;
+  height: 55px;
+  width: 55px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffdca6;
+  border: 2px solid #ffa00d;
+  box-shadow: 0 2px #c8c8c8;
+  transition: background .3s, border-color .3s;
+}
+
+.button:hover {
+  background: #ffa00d;
+}
+
+.service-button {
+  background: #f8c679;
+}
+
+.value {
+  font-size: 2rem;
+}
+
+.button-pressed {
+  top: 2px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.alt-value {
+  position: absolute;
+  font-size: 1.4rem;
+  color: #5f5f5f;
+  top: 5px;
+  left: 5px;
+}
+
+.active-caps {
+  background: #beffec;
+}
+
+#Backspace {
+  width: 156px;
+}
+
+#Tab {
+  width: 70px;
+}
+
+#Delete {
+  width: 81px;
+}
+
+#CapsLock {
+  width: 125px;
+}
+
+#Enter {
+  width: 146px;
+}
+
+#ShiftLeft {
+  width: 180px;
+}
+
+#ShiftRight {
+  width: 91px;
+}
+
+#Space {
+  width: 400px;
+}
+
+#ControlLeft, #ControlRight {
+  width: 60px;
+}
+
+#AltLeft, #AltRight {
+  width: 60px;
+}
+
+#ArrowUp > .value, #ArrowDown > .value, #ArrowLeft > .value, #ArrowRight > .value {
+  position: relative;
+  border-radius: 2px 0 0 2px;
+}
+
+#ArrowUp > .value::before, #ArrowUp > .value::after, #ArrowDown > .value::before, #ArrowDown > .value::after, #ArrowLeft > .value::before, #ArrowLeft > .value::after, #ArrowRight > .value::before, #ArrowRight > .value::after {
+  position: absolute;
+  content: '';
+  width: 7px;
+  height: 2px;
+  background: #474747;
+  left: -3px;
+}
+
+#ArrowUp > .value::before, #ArrowDown > .value::before, #ArrowLeft > .value::before, #ArrowRight > .value::before {
+  transform: rotate(-45deg);
+  top: -2px;
+}
+
+#ArrowUp > .value::after, #ArrowDown > .value::after, #ArrowLeft > .value::after, #ArrowRight > .value::after {
+  transform: rotate(45deg);
+  top: 2px;
+}
+
+#ArrowDown > .value {
+  transform: rotate(-90deg);
+}
+
+#ArrowUp > .value {
+  transform: rotate(90deg);
+}
+
+#ArrowRight > .value {
+  transform: rotate(180deg);
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 2rem;
+  resize: none;
+  border: 2px solid #25ffbf;
+  border-radius: 10px;
+  transition: .7s;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.language-tip {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.language-switcher {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #474747;
+  transition: .5s;
+}
+
+.language-switcher:hover {
+  color: #f8c679;
+}

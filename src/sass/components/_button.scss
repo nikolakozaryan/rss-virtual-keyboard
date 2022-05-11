@@ -1,0 +1,119 @@
+.button {
+    position: relative;
+    cursor: pointer;
+    height: 55px;
+    width: 55px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $button-color;
+    border: 2px solid $button-border-color;
+    box-shadow: 0 2px #c8c8c8;
+    transition: background .3s,
+                border-color .3s;
+    &:hover {
+        background: $button-border-color
+    }
+}
+
+.service-button {
+    background: $service-button-color;
+}
+
+.value {
+    font-size: 2rem;
+}
+
+.button-pressed {
+    top: 2px;
+    background: transparent;
+    box-shadow: none;
+}
+
+.alt-value {
+    position: absolute;
+    font-size: 1.4rem;
+    color: $alt-font-color;
+    top: 5px;
+    left: 5px;
+}
+
+.active-caps {
+    background: $color-keyboard;
+}
+
+#Backspace {
+    width: 156px;
+}
+
+#Tab {
+    width: 70px;
+}
+
+#Delete {
+    width: 81px;
+}
+
+#CapsLock {
+    width: 125px;
+}
+
+#Enter {
+    width: 146px;
+}
+
+#ShiftLeft {
+    width: 180px;
+}
+
+#ShiftRight {
+    width: 91px;
+}
+
+#Space {
+    width: 400px;
+}
+
+#ControlLeft, #ControlRight {
+    width: 60px;   
+}
+
+#AltLeft, #AltRight {
+    width: 60px;
+}
+
+#ArrowUp, #ArrowDown, #ArrowLeft, #ArrowRight {
+    &>.value {
+        position: relative;
+        border-radius: 2px 0 0 2px;
+        &::before, &::after {
+            position: absolute;
+            content: '';
+            width: 7px;
+            height: 2px;
+            background: $font-color;
+            left: -3px;
+        }
+        &::before {
+            transform: rotate(-45deg);
+            top: -2px;
+        }
+        &::after {
+            transform: rotate(45deg);
+            top: 2px;
+        }
+    }
+}
+
+#ArrowDown>.value {
+    transform: rotate(-90deg);
+}
+
+#ArrowUp>.value {
+    transform: rotate(90deg);
+}
+
+#ArrowRight>.value {
+    transform: rotate(180deg);
+}
