@@ -37,7 +37,7 @@ buttonElements.forEach(item => item.addEventListener('mousedown', () => {
     pressed.add(item.id)
     if(item.id === 'CapsLock') {
         caps(isCapsed);
-        document.CapsLock.classList.toggle('active-caps');
+        item.classList.toggle('active-caps');
         isCapsed = !isCapsed;
     }
     if (pressed.has('ShiftLeft')) addAltSymbol(item, isCapsed)
